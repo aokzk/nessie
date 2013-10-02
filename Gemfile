@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'simple_form'
+gem 'anjlab-bootstrap-rails', '>= 3.0.0.3', :require => 'bootstrap-rails'
+gem 'devise'
