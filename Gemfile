@@ -45,6 +45,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'simple_form'
+gem 'rails-i18n', '~> 4.0.0.pre'
 gem 'devise'
+gem 'devise-i18n'
 gem 'anjlab-bootstrap-rails', '>= 3.0.0.3', :require => 'bootstrap-rails'
 gem 'font-awesome-rails'
