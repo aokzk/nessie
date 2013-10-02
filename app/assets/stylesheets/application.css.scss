@@ -12,12 +12,23 @@
  *= require_tree .
  */
 // change colors
-$link-color: red;
-
 @import "twitter/bootstrap";
+@import "font-awesome";
 
 body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
+
+.login-panel {
+  margin-top: 40px;
+}
+
+.login-panel .input-group-addon {
+  width: 40px;
+}
+
+.login-panel .input-group {
+  width: 100%;
+}
