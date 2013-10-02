@@ -23,6 +23,7 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+        <!-- グローバルヘッダー -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -31,9 +32,38 @@
           </button>
           <%= link_to "Nessie", root_path, class: "navbar-brand" %>
         </div>
+
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+
+          <!-- ナビゲーション -->
+          <ul class="nav navbar-nav navbar">
             <li class="active"><%= link_to "Home", root_path %></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+
+          <!-- プロフィール -->
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <img class="img-rounded" src="https://2.gravatar.com/avatar/45c2cc1a731924edf1045d9146ca4a78?s=24" /> 
+                  <span> John Smith <b class="caret"></b></span>
+                  <!-- <span class="badge badge-dark-red">5</span> -->
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="glyphicon glyphicon-user"></i> 
+                    <span>Profile</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 
+                    <span>Settings</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> 
+                    <span>Messages</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-off"></i> 
+                    <span>Logout</span></a></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
