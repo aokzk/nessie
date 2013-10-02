@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+// change colors
+$link-color: red;
+
+@import "twitter/bootstrap";
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
