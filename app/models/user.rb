@@ -4,10 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
-  validates :terms, acceptance: true,
-                    on: :create,
-                    allow_nil: false
-
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
                        length: { minimum: 6, maximum: 24 },
