@@ -4,6 +4,6 @@ class Users::SessionsController < Devise::SessionsController
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_in) << :username
+    devise_parameter_sanitizer.for(:sign_in) << :login
   end
 end
