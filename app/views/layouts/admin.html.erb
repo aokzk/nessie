@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%= content_for?(:title) ? yield(:title) : "Nessie" %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag :application, media: "all", "data-turbolinks-track" => true %>
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- グローバルヘッダー -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "Nessie", root_path, class: "navbar-brand" %>!
+        </div>
+
+        <div class="navbar-collapse collapse">
+
+          <!-- ナビゲーション -->
+          <ul class="nav navbar-nav navbar">
+            <li class="active"><%= link_to "Home", root_path %></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+
+          <!-- プロフィール -->
+          <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <img class="img-rounded" src="https://2.gravatar.com/avatar/45c2cc1a731924edf1045d9146ca4a78?s=24" /> 
+                  <span> John Smith <b class="caret"></b></span>
+                  <!-- <span class="badge badge-dark-red">5</span> -->
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="glyphicon glyphicon-user"></i> 
+                    <span>Profile</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 
+                    <span>Settings</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> 
+                    <span>Messages</span></a></li>
+                <li><%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="glyphicon glyphicon-off"></i> 
+                    <span>Logout</span>
+                  <% end %></li>
+              </ul>
+            </li>
+          </ul>
+          <% end %>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= yield %>
+        </div>
+      </div>
+
+      <hr>
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  </body>
+</html>
