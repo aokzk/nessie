@@ -1,5 +1,5 @@
 Nessie::Application.routes.draw do
-  get "users/index"
+
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations",
@@ -11,6 +11,7 @@ Nessie::Application.routes.draw do
   }
   namespace :admin do
     resources :users
+    root 'users#index'
   end
   root 'home#index'
 
