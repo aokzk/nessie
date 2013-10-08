@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+
+    <div class="panel panel-default login-panel">
+      <div class="panel-heading">Login</div>
+      <div class="panel-body">
+        <%= simple_form_for(resource, :as => resource_name, :url => admin_session_path(resource_name), html: { class: "form"} ) do |f| %>
+          <% if alert %>
+            <div class="alert alert-danger">
+              <%= alert %>
+            </div>
+          <% end %>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><%= fa_icon "envelope-alt" %></span>
+              <%= f.text_field :email, autofocus: true, class: "form-control",
+                  placeholder: "email" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><%= fa_icon "key" %></span>
+              <%= f.password_field :password, class: "form-control", 
+                  placeholder: "password" %>
+            </div>
+          </div>
+          <div class="checkbox">
+            <label for="user_remember_me">
+              <%= f.check_box :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              ログイン状態を保存する
+            </label>
+          </div>
+
+          <div class="form-group">
+            <%= button_tag(type: :submit, class: "btn btn-primary btn-block") do %>
+              Login <%= fa_icon "signin" %>
+            <% end %>
+          </div>
+
+          <%= render "admins/shared/links" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

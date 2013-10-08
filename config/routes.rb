@@ -1,10 +1,17 @@
 Nessie::Application.routes.draw do
+  get "users/index"
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations",
     passwords: "users/passwords"
   }
-
+  devise_for :admins, controllers: {
+    sessions: "admins/sessions",
+    passwords: "admins/passwords"
+  }
+  namespace :admin do
+    resources :users
+  end
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
