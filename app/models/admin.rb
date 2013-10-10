@@ -1,7 +1,7 @@
 class Admin < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :timeoutable,
+  devise :database_authenticatable, :timeoutable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :login
   def self.find_first_by_auth_conditions(warden_conditions)
@@ -15,5 +15,9 @@ class Admin < ActiveRecord::Base
     else
       where(conditions).first
     end
+  end
+
+  def self.empty?
+    count == 0
   end
 end

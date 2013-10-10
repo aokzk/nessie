@@ -7,6 +7,7 @@ Nessie::Application.routes.draw do
   }
   devise_for :admins, controllers: {
     sessions: "admins/sessions",
+    registrations: "admins/registrations",
     passwords: "admins/passwords"
   }
   namespace :admin do
