@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -43,3 +44,23 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'pg'
+
+gem 'simple_form'
+gem 'rails-i18n', '~> 4.0.0.pre'
+gem 'devise'
+gem 'devise-i18n'
+gem 'anjlab-bootstrap-rails', '>= 3.0.0.3', :require => 'bootstrap-rails'
+gem 'font-awesome-rails'
+gem 'quiet_assets'
+gem 'kaminari'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'spring'
+  gem 'shoulda-matchers'
+  gem 'letter_opener'
+end
