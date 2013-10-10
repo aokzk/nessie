@@ -21,6 +21,20 @@ body {
 }
 
 
+.page-header {
+  background-color: #ececec;
+  margin-top: 0;
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
+#sidebar {
+  padding-top: 20px;
+  background-color: #11161A;
+}
+
 .login-panel {
   margin-top: 40px;
 
@@ -36,4 +50,15 @@ body {
   }
 }
 
+.pagination {
+  margin: 0;
+  li span {
+    background-color: none;
+  }
+}
 
+.main-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}

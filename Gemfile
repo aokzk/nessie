@@ -51,7 +51,7 @@ gem 'devise-i18n'
 gem 'anjlab-bootstrap-rails', '>= 3.0.0.3', :require => 'bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'quiet_assets'
-gem 'letter_opener', group: :development
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -59,4 +59,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spring'
   gem 'shoulda-matchers'
+  gem 'letter_opener'
 end
