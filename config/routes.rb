@@ -12,6 +12,7 @@ Nessie::Application.routes.draw do
   }
   namespace :admin do
     resources :users
+    resources :admins
     root 'users#index'
   end
   root 'home#index'
