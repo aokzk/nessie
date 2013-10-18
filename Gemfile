@@ -55,6 +55,7 @@ gem 'anjlab-bootstrap-rails', '>= 3.0.0.3', :require => 'bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'quiet_assets'
 gem 'kaminari'
+gem 'active_decorator'
 
 group :development, :test do
   gem 'rspec-rails'
