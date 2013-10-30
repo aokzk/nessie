@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
     ActiveDecorator::Decorator.instance.decorate(super) unless super.nil?
     super
   end
+
+  def current_user
+    ActiveDecorator::Decorator.instance.decorate(super) unless super.nil?
+    super
+  end
 end
