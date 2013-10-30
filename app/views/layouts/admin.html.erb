@@ -62,13 +62,21 @@
                     </span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a href="#"><i class="glyphicon glyphicon-user"></i> 
-                        <span>Profile</span></a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 
-                        <span>Settings</span></a></li>
+                    <li>
+                      <%= link_to edit_admin_registration_path do %>
+                        <%= fa_icon :user %>
+                        <span>Profile</span>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to edit_admin_passwords_path do %>
+                        <%= fa_icon :gear %> 
+                        <span>Settings</span>
+                      <% end %>
+                    </li>
                     <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> 
                         <span>Messages</span></a></li>
-                    <li><%= link_to destroy_user_session_path, method: :delete do %>
+                    <li><%= link_to destroy_admin_session_path, method: :delete do %>
                         <i class="glyphicon glyphicon-off"></i>
                         <span>Logout</span>
                     <% end %></li>
