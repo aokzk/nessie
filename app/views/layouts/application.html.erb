@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "Nessie", root_path, class: "navbar-brand" %>!
+          <%= link_to "Nessie", root_path, class: "navbar-brand" %>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -46,18 +46,23 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span>
-                  <img class="img-rounded" src="https://2.gravatar.com/avatar/45c2cc1a731924edf1045d9146ca4a78?s=24" /> 
-                  <span> John Smith <b class="caret"></b></span>
-                  <!-- <span class="badge badge-dark-red">5</span> -->
+                  <%= current_user.avatar_link %>
+                  <span> <%= current_user.username %> <b class="caret"></b></span>
                 </span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="glyphicon glyphicon-user"></i> 
-                    <span>Profile</span></a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 
-                    <span>Settings</span></a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> 
-                    <span>Messages</span></a></li>
+                <li>
+                  <%= link_to edit_user_registration_path do %>
+                    <%= fa_icon :user %>
+                    <span>Profile</span>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to edit_user_password_path do %>
+                    <%= fa_icon :gear %> 
+                    <span>Settings</span>
+                  <% end %>
+                </li>
                 <li><%= link_to destroy_user_session_path, method: :delete do %>
                     <i class="glyphicon glyphicon-off"></i> 
                     <span>Logout</span>
