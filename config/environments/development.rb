@@ -29,4 +29,7 @@ Nessie::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'nessie.dev' }
   config.action_mailer.delivery_method = :letter_opener
+
+  # rails-i18n default locales
+  config.i18n.available_locales = :ja
 end

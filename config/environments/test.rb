@@ -33,4 +33,7 @@ Nessie::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # rails-i18n default locales
+  config.i18n.available_locales = :ja
 end
