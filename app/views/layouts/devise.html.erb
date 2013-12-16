@@ -31,6 +31,17 @@
           </button>
           <%= link_to "Nessie", root_path, class: "navbar-brand" %>
         </div><!--/.navbar-header -->
+
+        <div class="navbar-collapse collapse">
+          <!-- ナビゲーション -->
+          <ul class="nav navbar-nav navbar">
+            <li class="active"><%= link_to "Home", root_path %></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+
+          <%= render 'status' %>
+        </div><!--/.navbar-collapse -->
+
       </div>
     </div>
 
