@@ -77,4 +77,7 @@ Nessie::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # rails-i18n default locales
+  config.i18n.available_locales = :ja
 end
