@@ -2,6 +2,12 @@
 
 module ApplicationHelper
 
+  def form_actions(options = {}, &block)
+    content_tag :div, class: "form-group" do
+      content_tag(:div, class: "col-sm-offset-2 col-sm-6", &block)
+    end
+  end
+
   def title(page_title, options={})
     content_for(:title, page_title.to_s)
 

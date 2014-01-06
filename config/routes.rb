@@ -1,5 +1,6 @@
 Nessie::Application.routes.draw do
 
+
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations",
@@ -13,6 +14,7 @@ Nessie::Application.routes.draw do
   namespace :admin do
     resources :users
     resources :admins
+    resources :items, except: [:show]
     root 'users#index'
   end
   root 'home#index'

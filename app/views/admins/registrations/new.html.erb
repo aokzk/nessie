@@ -4,7 +4,7 @@
     <div class="panel panel-default login-panel">
       <div class="panel-heading">Sign Up</div>
       <div class="panel-body">
-        <%= simple_form_for(resource, :as => resource_name, :url => admin_registration_path, html: { class: "form" }) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => admin_registration_path, html: { class: "form" }) do |f| %>
           <%= devise_error_messages! %>
           <div class="form-group">
             <div class="input-group">

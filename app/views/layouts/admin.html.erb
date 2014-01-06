@@ -49,6 +49,7 @@
               <li class="active"><%= link_to "Home", admin_root_path %></li>
               <li><%= link_to "User", admin_users_path %></li>
               <li><%= link_to "Admin", admin_admins_path %></li>
+              <li><%= link_to "Item", admin_items_path %></li>
             </ul>
 
             <!-- プロフィール -->
@@ -69,7 +70,7 @@
                       <% end %>
                     </li>
                     <li>
-                      <%= link_to edit_admin_passwords_path do %>
+                      <%= link_to edit_admin_password_path do %>
                         <%= fa_icon :gear %> 
                         <span>Settings</span>
                       <% end %>
@@ -107,6 +108,12 @@
             <%= link_to admin_admins_path do %>
               <i class="icon-user icon-2x"></i>
               <span>Admin</span>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to admin_items_path do %>
+              <i class="icon-user icon-2x"></i>
+              <span>Item</span>
             <% end %>
           </li>
           
